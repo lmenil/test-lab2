@@ -1,8 +1,9 @@
 import config from './config/config.js' 
 import app from './server/express.js'
-import mongoose from 'mongoose' 
+import mongoose from 'mongoose'
+
 	mongoose.Promise = global.Promise
-	mongoose.connect(config.mongoUri, { useNewUrlParser: true,
+	mongoose.connect(config.mongoUri, { useNewUrlParser: true,	
   } 
   )
   .then(() => {
@@ -12,6 +13,8 @@ import mongoose from 'mongoose'
 	mongoose.connection.on('error', () => {
 	throw new Error(`unable to connect to database: ${config.mongoUri}`) 
 	})
+
+
 app.get("/", (req, res) => {
 res.json({ message: "Welcome to User application." });
 });

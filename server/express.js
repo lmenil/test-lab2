@@ -1,4 +1,5 @@
 import express from 'express' 
+import * as dotenv from "dotenv";
 import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import compress from 'compression'
@@ -8,7 +9,7 @@ import Template from './../template.js'
 import userRoutes from './routes/user.routes.js'
 import authRoutes from './routes/auth.routes.js'
 
-
+dotenv.config();
     const app = express()
    /*... configure express ... */  
    app.use(express.json());
