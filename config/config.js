@@ -5,7 +5,6 @@ const config = {
     env: process.env.NODE_ENV || 'development',
     port: process.env.PORT || 3000,
     jwtSecret: process.env.JWT_SECRET || "YOUR_secret_key", 
-    // mongoUri: process.env.MONGODB_URI || "mongodb+srv://1ns0n978:drQDJvov28kWjMMz@cluster0.rmydc.mongodb.net/Skeleton?retryWrites=true&w=majority&appName=Cluster0"||
     mongoUri: process.env.MONGO_URI ||
     process.env.MONGO_HOST ||
     'mongodb://' + (process.env.IP || 'localhost') + ':' + 
